@@ -55,7 +55,7 @@ function loadInfo() {
                 '<h5 class="card-title">Instance Info</h5>' +
                 '<button type="button" class="btn btn-primary card-link" id="whale-button-boot" ' +
                 '        onclick="CTFd._internal.challenge.boot()">' +
-                'Launch an instance' +
+                '인스턴스 실행하기' +
                 '</button>' +
                 '</div>' +
                 '</div>');
@@ -73,11 +73,11 @@ function loadInfo() {
                         <p id="user-access" class="card-text"></p>
                         <button type="button" class="btn btn-danger card-link" id="whale-button-destroy"
                                 onclick="CTFd._internal.challenge.destroy()">
-                            Destroy this instance
+                            인스턴스 종료하기
                         </button>
                         <button type="button" class="btn btn-success card-link" id="whale-button-renew"
                                 onclick="CTFd._internal.challenge.renew()">
-                            Renew this instance
+                            인스턴스 갱신하기
                         </button>
                     </div>
                 </div>`
@@ -132,11 +132,11 @@ CTFd._internal.challenge.destroy = function () {
             loadInfo();
             CTFd.ui.ezq.ezAlert({
                 title: "Success",
-                body: "Your instance has been destroyed!",
+                body: "인스턴스가 정상 종료되었습니다!",//"Your instance has been destroyed!",
                 button: "OK"
             });
         } else {
-            $('#whale-button-destroy')[0].innerHTML = "Destroy this instance";
+            $('#whale-button-destroy')[0].innerHTML = "인스턴스 종료하기";//"Destroy this instance";
             $('#whale-button-destroy')[0].disabled = false;
             CTFd.ui.ezq.ezAlert({
                 title: "Fail",
@@ -179,11 +179,11 @@ CTFd._internal.challenge.renew = function () {
             loadInfo();
             CTFd.ui.ezq.ezAlert({
                 title: "Success",
-                body: "Your instance has been renewed!",
+                body: "인스턴스가 갱신되었습니다!",//"Your instance has been renewed!",
                 button: "OK"
             });
         } else {
-            $('#whale-button-renew')[0].innerHTML = "Renew this instance";
+            $('#whale-button-renew')[0].innerHTML = "인스턴스 갱신하기";//"Renew this instance";
             $('#whale-button-renew')[0].disabled = false;
             CTFd.ui.ezq.ezAlert({
                 title: "Fail",
@@ -226,11 +226,11 @@ CTFd._internal.challenge.boot = function () {
             loadInfo();
             CTFd.ui.ezq.ezAlert({
                 title: "Success",
-                body: "Your instance has been deployed!",
+                body: "인스턴스가 정상 실행되었습니다!",//"Your instance has been deployed!",
                 button: "OK"
             });
         } else {
-            $('#whale-button-boot')[0].innerHTML = "Launch an instance";
+            $('#whale-button-boot')[0].innerHTML = "인스턴스 실행하기";//"Launch an instance";
             $('#whale-button-boot')[0].disabled = false;
             CTFd.ui.ezq.ezAlert({
                 title: "Fail",
